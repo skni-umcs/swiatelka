@@ -10,8 +10,7 @@ class PatternEngine:
   # returns ready-to-send array of pixels
   def arr_from_image(self,name,emulate = False):
     pixel_arr = self._load_image(name)
-    # INNY WYMIAR NA TESTY!!!
-    return self._RGB_to_RBG(pixel_arr).flatten()[10*3:] if not emulate else self.emulate(pixel_arr)
+    return self.flatten()[12*3:] if not emulate else self.emulate(pixel_arr)
 
   # prints image on the terminal - big=True for single image display
   def print_on_terminal(self,name,big = False):
@@ -21,15 +20,8 @@ class PatternEngine:
         for pixel in row:
           self._print_pixel(pixel)
           self._print_pixel(pixel)
-          self._print_pixel(pixel)
         print()
         for pixel in row:
-          self._print_pixel(pixel)
-          self._print_pixel(pixel)
-          self._print_pixel(pixel)
-        print()
-        for pixel in row:
-          self._print_pixel(pixel)
           self._print_pixel(pixel)
           self._print_pixel(pixel)
         print()
@@ -46,15 +38,8 @@ class PatternEngine:
         for pixel in row:
           self._print_pixel(pixel)
           self._print_pixel(pixel)
-          self._print_pixel(pixel)
         print()
         for pixel in row:
-          self._print_pixel(pixel)
-          self._print_pixel(pixel)
-          self._print_pixel(pixel)
-        print()
-        for pixel in row:
-          self._print_pixel(pixel)
           self._print_pixel(pixel)
           self._print_pixel(pixel)
         print()
@@ -77,12 +62,12 @@ class PatternEngine:
     # pass
 
   def print_all_patterns(self,path="Grafiki"):
-    images = os.listdir(path)
+    images = sorted(os.listdir(path))
     i = 1
     for image in images:
       if not image.startswith("."):
         print(f"{i}) {image}")
-        self.print_on_terminal(image)
+        self.print_on_terminal(path+'/'+image)
         print()
         i+=1
 
@@ -103,9 +88,10 @@ class PatternEngine:
       image = np.array([[[val for val in pixel[:3]] for pixel in row] for row in image])
     return image
 
+  # TURNS OUT IT IS PROBABLY NOT NEDDED
   # conversion from RGB to RBG for the window controller
-  def _RGB_to_RBG(self,pixel_arr):
-    return np.array([[[pixel[0],pixel[2],pixel[1]] for pixel in row] for row in pixel_arr])
+  # def _RGB_to_RBG(self,pixel_arr):
+  #   return np.array([[[pixel[0],pixel[2],pixel[1]] for pixel in row] for row in pixel_arr])
 
   # prints single pixel on the terminal
   def _print_pixel(self,pixel):
@@ -146,8 +132,8 @@ class PatternEngine:
     for _ in range(4):
       for _ in range(normal_floor_window_count):
         row.append(random.randint(0,255)) # R
-        row.append(random.randint(0,255)) # B
         row.append(random.randint(0,255)) # G
+        row.append(random.randint(0,255)) # B
       rgb_arr.append(row)
       row = []
 
@@ -159,3 +145,7 @@ class PatternEngine:
     windows = Image.fromarray(image_arr)
     windows.show()
     return out.flatten()[12*3:]
+  
+if __name__ == '__main__':
+  pe = PatternEngine()
+  pe.print_all_patterns()
