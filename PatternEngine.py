@@ -10,7 +10,7 @@ class PatternEngine:
   # returns ready-to-send array of pixels
   def arr_from_image(self,name,emulate = False):
     pixel_arr = self._load_image(name)
-    return self.flatten()[12*3:] if not emulate else self.emulate(pixel_arr)
+    return pixel_arr.flatten()[12*3:] if not emulate else self.emulate(pixel_arr)
 
   # prints image on the terminal - big=True for single image display
   def print_on_terminal(self,name,big = False):
