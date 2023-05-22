@@ -5,6 +5,16 @@
 # Synopsis
 * `swiatelka [-h] [-f FILENAME | -c COLOR | -b] [-p]`
 
+# Prerequisites
+* Python 3.6 or higher
+* requirements from [requirements.txt](requirements.txt)
+* `venv` (optional)
+
+# Installation
+* `python3 -m venv venv`
+* `source venv/bin/activate`
+* `pip install -r requirements.txt`
+
 # Usage
 * `./swiatelka.py -[the option]`
 * `python3 swiatelka.py -[the option]`
