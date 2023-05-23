@@ -1,4 +1,3 @@
-
 # Swiatelka
 * swiatelka - change lights in UMCS windows.
 
@@ -8,6 +7,7 @@
 * `venv` (optional)
 
 # Installation
+* user in group `dialout`
 * `python3 -m venv venv` (optional)
 * `source venv/bin/activate` (optional)
 * `pip install -r requirements.txt`
@@ -22,7 +22,7 @@
 | Options   |           |
 |-----------|-----------|
 | `-h`, `--help` | Show help message and exit |
-| `-f [FILENAME]`, `--filename [FILENAME]` | Bitmap file to display (*you can use your own .bmp files or pre-existing templates from the "Grafiki" folder*) |
+| `-f [FILENAME]`, `--filename [FILENAME]` | Bitmap file to display (*you can use your own `5x28px` .bmp files or pre-existing templates from the "Grafiki" folder*) |
 | `-c [COLOR]`, `--color [COLOR]` | Display solid color on the windows (*observe the values corresponding to the color option*)|
 | `-b`, `--blackout` | Turns off all the lights on the windows - changes color to black|
 | `-p [PATTERN]`, `--preview [PATTERN]` | Preview pattern on terminal instead of displaying on the windows|
@@ -31,7 +31,7 @@
 > #### Pre-existing templates from the "Grafiki" folder :
 * [`MFII.bmp`](Grafiki/MFII.bmp) - the inscription "I ❤️ MFII" ![MFII](Grafiki/MFII.bmp)
 * [`Polska.bmp`](Grafiki/Polska.bmp) - the flag of Poland ![Polska](Grafiki/Polska.bmp)
-* [`Ukraina.bmp`](Grafiki/Ukraine.bmp) - the flag of Ukraine ![Ukraina](Grafiki/Ukraina.bmp)
+* [`Ukraina.bmp`](Grafiki/Ukraina.bmp) - the flag of Ukraine ![Ukraina](Grafiki/Ukraina.bmp)
 * [`UMCS.bmp`](Grafiki/UMCS.bmp) - the inscription "I ❤️ UMCS" ![UMCS](Grafiki/UMCS.bmp)
 * [`MFII_wide.bmp`](Grafiki/MFII_wide.bmp) - the inscription "MFII" ![MFII_wide](Grafiki/MFII_wide.bmp)
 ***
