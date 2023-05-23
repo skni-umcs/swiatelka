@@ -29,11 +29,11 @@
 | `-pa`, `--preview-all` | Preview all patterns on terminal from folder "Grafiki"|
 ***
 > #### Pre-existing templates from the "Grafiki" folder :
-* [`MFII.bmp`](Grafiki/MFII.bmp) - the inscription "I ❤️ MFII"
-* [`Polska.bmp`](Grafiki/Polska.bmp) - the flag of Poland
-* [`Ukraina.bmp`](Grafiki/Ukraina.bmp) - the flag of Ukraine
-* [`UMCS.bmp`](Grafiki/UMCS.bmp) - the inscription "I ❤️ UMCS"
-* [`MFII_wide.bmp`](Grafiki/MFII_wide.bmp) - the inscription "MFII"
+* [`MFII.bmp`](Grafiki/MFII.bmp) - the inscription "I ❤️ MFII" ![MFII](Grafiki/MFII.bmp)
+* [`Polska.bmp`](Grafiki/Polska.bmp) - the flag of Poland ![Polska](Grafiki/Polska.bmp)
+* [`Ukraina.bmp`](Grafiki/Ukraine.bmp) - the flag of Ukraine ![Ukraina](Grafiki/Ukraina.bmp)
+* [`UMCS.bmp`](Grafiki/UMCS.bmp) - the inscription "I ❤️ UMCS" ![UMCS](Grafiki/UMCS.bmp)
+* [`MFII_wide.bmp`](Grafiki/MFII_wide.bmp) - the inscription "MFII" ![MFII_wide](Grafiki/MFII_wide.bmp)
 ***
 > #### Values corresponding to the color option :
 * black
