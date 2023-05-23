@@ -2,22 +2,19 @@
 # Swiatelka
 * swiatelka - change lights in UMCS windows.
 
-# Synopsis
-* `swiatelka [-h] [-f FILENAME | -c COLOR | -b] [-p]`
-
 # Prerequisites
 * Python 3.6 or higher
 * requirements from [requirements.txt](requirements.txt)
 * `venv` (optional)
 
 # Installation
-* `python3 -m venv venv`
-* `source venv/bin/activate`
+* `python3 -m venv venv` (optional)
+* `source venv/bin/activate` (optional)
 * `pip install -r requirements.txt`
 
 # Usage
-* `./swiatelka.py -[the option]`
-* `python3 swiatelka.py -[the option]`
+* `./swiatelka.py [-h] [-f FILENAME | -c COLOR | -b] [-p]`
+* `python3 swiatelka.py [-h] [-f FILENAME | -c COLOR | -b] [-p]`
 
 # Description
 > Change lights in UMCS windows.
