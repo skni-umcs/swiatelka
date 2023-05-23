@@ -52,5 +52,11 @@
 * orange
 * brown
 * pale_pink
+
+
+## Mirrors:
+* <https://git.skni.umcs.pl/skni/swiatelka> — main development repozitory
+* <https://github.com/skni-umcs/swiatelka> — Mirror
 ***
 ###### *Made by SKNI*
+
