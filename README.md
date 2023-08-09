@@ -53,6 +53,9 @@
 * brown
 * pale_pink
 
+## D-Bus daemon configuration:
+put the pl.umcs.skni.LedManager.conf file in
+/etc/dbus-1/system.d
 
 ## Mirrors:
 * <https://git.skni.umcs.pl/skni/swiatelka> — main development repozitory
