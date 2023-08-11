@@ -1,0 +1,5 @@
+[Unit]
+Description=Manage leds connected with DMX protocol
+
+[Service]
+ExecStart=/usr/bin/python /home/ignapk/swiatelka/LedManager.py

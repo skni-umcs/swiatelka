@@ -1,5 +1,6 @@
 from datetime import datetime
 from gi.repository import GLib
+from systemd import journal
 
 import dbus
 import dbus.service
@@ -47,9 +48,9 @@ class LedManager(dbus.service.Object):
         dmx_values = [max(0, min(int(x), 255)) for x in dmx_values]
         if debug:
             for i in range(0, len(dmx_values), 3):
-                print(f"{i + 1}: {dmx_values[i + 2]}")
-                print(f"{i + 2}: {dmx_values[i + 1]}")
-                print(f"{i + 3}: {dmx_values[i + 0]}")
+                journal.send(f"{i + 1}: {dmx_values[i + 2]}")
+                journal.send(f"{i + 2}: {dmx_values[i + 1]}")
+                journal.send(f"{i + 3}: {dmx_values[i + 0]}")
             return
 
         try:
@@ -60,16 +61,18 @@ class LedManager(dbus.service.Object):
                 dmx_device.set_data(i + 3, dmx_values[i + 0])
             dmx_device.send()
         except Exception as err:
-            print("Exception: ", err)
+            journal.send(f"Exception: {err}")
 
     @dbus.service.method("pl.umcs.skni.LedManager",
                          in_signature='', out_signature='s')
     def Test(self):
+        journal.send("Hello from LedManager!")
         return "Hello from LedManager!"
 
     @dbus.service.method("pl.umcs.skni.LedManager",
                          in_signature='', out_signature='')
     def Exit(self):
+        journal.send("Exiting LedManager")
         mainloop.quit()
 
 if __name__ == '__main__':
@@ -80,6 +83,6 @@ if __name__ == '__main__':
     object = LedManager(system_bus, '/pl/umcs/skni/LedManager')
 
     mainloop = GLib.MainLoop()
-    print("Running LedManager")
+    journal.send("Running LedManager")
     GLib.idle_add(object.loop)
     mainloop.run()
