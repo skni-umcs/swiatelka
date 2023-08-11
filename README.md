@@ -57,6 +57,12 @@
 put the pl.umcs.skni.LedManager.conf file in
 /etc/dbus-1/system.d
 
+## Systemd unit configuration:
+Put the LedManager.service file in
+`/etc/systemd/system/`
+
+Start or enable the LedManager service
+
 ## Mirrors:
 * <https://git.skni.umcs.pl/skni/swiatelka> — main development repozitory
 * <https://github.com/skni-umcs/swiatelka> — Mirror
